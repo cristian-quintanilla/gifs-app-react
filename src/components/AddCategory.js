@@ -6,10 +6,12 @@ export const AddCategory = ({ setCategories }) => {
 	
 	const handleInputChange = e => {
 		setInputValue(e.target.value);
+		// console.log('handleInputChange para pruebas');
 	}
 
 	const handleSubmit = e => {
 		e.preventDefault();
+		// console.log('handleSubmit para pruebas');
 		
 		// Validación
 		if (inputValue.trim().length > 2){
@@ -20,6 +22,7 @@ export const AddCategory = ({ setCategories }) => {
 
 	return (
 		<form onSubmit={ handleSubmit } >
+			<p>{ inputValue }</p>
 			<input
 				type="text"
 				placeholder="Agregar Categoría..."
